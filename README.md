@@ -273,7 +273,32 @@ Comparando o indicador previsto com a meta pactuada, por município × rede. Res
 **Quais variáveis possuem maior influência nos modelos?**
 Ver seção 7 e as imagens 11, 13, 14 e 15 (permutação, SHAP em barras, *beeswarm* e *dependence plot*). Dois achados além do ranking: a proficiência média do estado fica no mesmo patamar da do próprio município, e a dispersão (p75, p25) entra entre as mais influentes — municípios heterogêneos escondem escolas em risco atrás de uma média aceitável.
 
-### 10.2 Uso prático para políticas públicas
+### 10.2 Como o modelo rodaria num ciclo futuro
+
+A validação aqui prova generalização para **municípios** que o modelo nunca viu — não para **anos** futuros. São coisas diferentes, e vale ser explícito sobre o que seria preciso para usar isto em 2026.
+
+**Quando a previsão seria feita.** No início do ano letivo, antes da aplicação da prova. Essa data é o que define quais variáveis podem entrar: é por isso que o histórico é sempre do ano anterior, que a meta é a pactuada com antecedência, e que o PIB recua dois anos (o IBGE ainda não publicou o do ano-base).
+
+**O que estaria disponível nessa data.** Tudo que a base usa hoje, com uma defasagem a mais:
+
+| variável | origem no ciclo seguinte |
+|---|---|
+| ICA e proficiência do município e da UF | resultado do ciclo anterior, já publicado |
+| dispersão municipal (desvio, p25, p75) | microdado do ciclo anterior |
+| metas municipal, estadual e nacional | pactuadas antes do ciclo |
+| população e PIB | IBGE, com a defasagem de publicação de cada fonte |
+
+Nenhuma exige dado novo: o pipeline da Fase 2 reprocessado com o ciclo mais recente entrega todas.
+
+**O que precisaria ser refeito, não reaproveitado.** O modelo salvo em `data/models/` **não** deve ser aplicado direto no ciclo seguinte. Três coisas mudam de ano para ano:
+
+1. **O limiar.** Ele foi calibrado para recall de 0,70 na validação deste ciclo. Como o recall depende da composição municipal, ele precisa ser recalibrado com os dados do ciclo anterior antes de cada uso.
+2. **A distribuição das variáveis.** Se a composição das escolas avaliadas mudar, o modelo degrada por *data drift*; se a régua mudar — uma revisão do corte de 743 pontos, por exemplo —, degrada por *concept drift*. Os dois são detectáveis comparando as distribuições de entrada entre ciclos.
+3. **A própria relação.** Dois anos de dados não permitem afirmar que o padrão de 2023→2024 vale para 2025→2026.
+
+**Como isso seria validado.** Com um terceiro ciclo disponível, a verificação honesta é treinar em 2023→2024 e testar em 2024→2025, medindo o mesmo MAE da taxa municipal contra a mesma regra ingênua. Só esse teste responde se o modelo generaliza no tempo — e ele não pode ser feito com os dados que existem hoje.
+
+### 10.3 Uso prático para políticas públicas
 
 - **Priorização orçamentária** — a lista dos municípios com maior risco previsto, ordenada, é diretamente acionável para direcionar formação de professores, material e apoio técnico antes do ciclo letivo.
 - **Alerta precoce** — o perfil "Atenção" reúne 1.571 unidades estáveis no próprio histórico, mas com previsão abaixo da meta pactuada. Não são municípios em queda: são municípios cuja meta foi fixada acima do ritmo que eles vêm praticando. É onde a conversa sobre viabilidade da meta precisa acontecer antes do ciclo, não depois.
@@ -309,7 +334,6 @@ Ver seção 7 e as imagens 11, 13, 14 e 15 (permutação, SHAP em barras, *beesw
 │   ├── visualization/graficos.py
 │   └── relatorio.py
 ├── reports/                   # eda.md, modelagem.md, métricas e rankings
-├── scripts/gerar_apresentacao.py  # gera os slides a partir de reports/ (.pptx não versionado)
 ├── images/                    # 19 gráficos gerados
 ├── tests/                     # 13 testes (vazamento, split, pipeline, base)
 ├── main.py                    # pipeline reproduzível de ponta a ponta
