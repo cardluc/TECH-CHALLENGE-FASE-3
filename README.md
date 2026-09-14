@@ -265,8 +265,7 @@ O ICA do município no ano anterior domina (SHAP 0,182), seguido pela proficiên
 O ranking completo está em `reports/risco_municipal.csv`, ordenável por risco previsto, com nome, UF, rede, indicador previsto, meta e número de alunos. As 15 primeiras posições aparecem em `reports/modelagem.md` e na imagem 12. As previsões são *out-of-fold*: cada unidade é prevista por um modelo que não viu aquele município no treino.
 
 **Quais regiões possuem padrões semelhantes?**
-Dois recortes. Por macrorregião, o risco médio vai de 48,5% no Norte a 31,7% no Sudeste.
- Por comportamento, o k-means agrupa as unidades em quatro perfis — Crítico, Atenção, Intermediário e Consolidado — que não coincidem com a geografia: um município do Sudeste pode estar no perfil Crítico. O agrupamento foi validado por silhueta, Davies-Bouldin e comparação entre k-means, hierárquico Ward e mistura gaussiana.
+Dois recortes. Por macrorregião, o risco médio vai de 48,5% no Norte a 31,7% no Sudeste — e essa ordem é o resultado mais estável do projeto entre execuções. Por comportamento, o k-means agrupa as unidades em quatro perfis — Crítico, Atenção, Intermediário e Consolidado — que não coincidem com a geografia: um município do Sudeste pode estar no perfil Crítico. O agrupamento foi validado por silhueta, Davies-Bouldin e comparação entre k-means, hierárquico Ward e mistura gaussiana; a composição dos grupos, porém, é instável (ver seção 8).
 
 **Como prever municípios que podem não atingir metas futuras?**
 Comparando o indicador previsto com a meta pactuada, por município × rede. Resultado: 1.746 de 3.656 unidades com meta (47,8%) ficam abaixo dela. A validação desse produto está na seção 6.1 — o erro da taxa prevista é de 8,33 p.p. contra 11,04 p.p. da regra de repetir o ano anterior.

@@ -93,7 +93,9 @@ A relação é monótona e forte: quanto maior a taxa da escola e do município 
 
 ## 6. Uma armadilha da fonte: o código da escola
 
-O microdado traz `id_escola`, mas a coluna é descrita como *máscara de código fictício* — e a máscara é **regerada a cada ano**. Evidências: apenas **3,5%** dos códigos presentes nos dois anos pertencem ao mesmo município, e a taxa de alfabetização por escola correlaciona apenas **0,25** entre 2023 e 2024, contra **0,64** da taxa municipal. Usar o histórico da escola seria alimentar o modelo com ruído. A variável foi descartada; do nível da escola resta apenas o **porte** medido no próprio ano.
+O microdado traz `id_escola`, mas a coluna é descrita como *máscara de código fictício* — e a máscara é **regerada a cada ano**. Evidências: apenas **3,5%** dos códigos presentes nos dois anos pertencem ao mesmo município, e a taxa de alfabetização por escola correlaciona apenas **0,25** entre 2023 e 2024, contra **0,64** da taxa municipal. Usar o histórico da escola seria alimentar o modelo com ruído. A variável foi descartada.
+
+O porte da escola no ano-alvo também não serve: contar alunos avaliados em 2024 só é possível **depois** da prova. Não é vazamento — não contém a resposta — é indisponibilidade na data em que a previsão seria feita. Por isso o projeto não tem nenhuma variável de escola, e a menor unidade de contexto é o município.
 
 ## 7. Hipóteses analíticas
 
