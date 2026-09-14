@@ -1,0 +1,61 @@
+{
+  "unidades_municipio_rede": 4189,
+  "municipios_distintos": 3818,
+  "sem_meta_pactuada": 533,
+  "avaliaveis_contra_meta": 3656,
+  "em_risco_de_nao_atingir_meta": 1746,
+  "pct_em_risco": 47.8,
+  "risco_medio_por_regiao": {
+    "Norte": 48.5,
+    "Nordeste": 43.8,
+    "Sul": 36.8,
+    "Centro-Oeste": 32.3,
+    "Sudeste": 31.7
+  },
+  "k_adotado": 4,
+  "silhueta_k_adotado": 0.354,
+  "perfis": [
+    {
+      "perfil": 0,
+      "municipios": 1571,
+      "indicador_previsto": 58.9,
+      "taxa_ano_anterior": 59.7,
+      "meta_do_ano": 63.0,
+      "alunos_medio": 182.4,
+      "nome_perfil": "Atenção"
+    },
+    {
+      "perfil": 1,
+      "municipios": 1223,
+      "indicador_previsto": 78.9,
+      "taxa_ano_anterior": 79.7,
+      "meta_do_ano": 76.5,
+      "alunos_medio": 88.7,
+      "nome_perfil": "Consolidado"
+    },
+    {
+      "perfil": 2,
+      "municipios": 822,
+      "indicador_previsto": 39.6,
+      "taxa_ano_anterior": 34.6,
+      "meta_do_ano": 41.3,
+      "alunos_medio": 158.6,
+      "nome_perfil": "Crítico"
+    },
+    {
+      "perfil": 3,
+      "municipios": 573,
+      "indicador_previsto": 64.6,
+      "taxa_ano_anterior": 49.0,
+      "meta_do_ano": 53.9,
+      "alunos_medio": 87.7,
+      "nome_perfil": "Intermediário"
+    }
+  ],
+  "erro_taxa_municipal_pp": {
+    "mae_modelo": 8.33,
+    "rmse_modelo": 11.0,
+    "mae_regra_ano_anterior": 11.04,
+    "n": 4092
+  }
+}
