@@ -34,7 +34,7 @@ Três leituras recorrem à Silver, por motivos que a Gold não resolve:
 | Registros | **1.851.852 alunos válidos**, 25 colunas |
 | Alvo | `alfabetizado` (1/0) — 59,8% positivos |
 | Contexto | desempenho de 2023, por município e UF |
-| Enriquecimento externo | população e PIB municipal de 2023 (IBGE, via BigQuery) |
+| Enriquecimento externo | população de 2023 e PIB municipal de 2021 (IBGE, via BigQuery) |
 
 **Ler da Gold exige mais cuidado com vazamento, não menos.** A partição de 2024 já traz `indicador_alfabetizacao`, `taxa_oficial`, `gap_meta` e `atingiu_meta` — ou seja, o resultado calculado. Por isso todo contexto é filtrado em 2023, e da partição do ano-alvo só se extrai a **meta**, que é pactuada com antecedência. As quatro colunas acima estão na lista de proibidas do teste de vazamento.
 
@@ -58,7 +58,8 @@ Três leituras recorrem à Silver, por motivos que a Gold não resolve:
 
 **Socioeconômicas** — o contexto material do município:
 
-- `populacao`, `pib`, `pib_per_capita` — IBGE, até 2023
+- `populacao` — estimativa do IBGE para 2023
+- `pib`, `pib_per_capita` — PIB dos Municípios de 2021, o último publicado antes do ciclo (ver 6.4)
 
 **Técnica** — controle do instrumento de medida:
 

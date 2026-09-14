@@ -1,5 +1,7 @@
 # dados e artefatos gerados
-data/
+# data/* e não data/: ignorar o diretório inteiro faz o git nem descer nele,
+# e aí a exceção do .gitkeep não teria efeito
+data/*
 !data/.gitkeep
 
 # logs de execução (os resultados ficam em reports/*.json e *.csv)
