@@ -1,0 +1,8 @@
+modelo,com_ibge,sem_ibge,diferenca
+gradient_boosting,0.6543,0.6539,0.0004
+random_forest,0.6537,0.6534,0.0003
+regressao_logistica,0.6482,0.6477,0.0005
+svm_linear,0.6463,0.6485,-0.0022
+arvore_decisao,0.6427,0.6435,-0.0008
+naive_bayes,0.6276,0.6334,-0.0058
+baseline,0.5,0.5,0.0

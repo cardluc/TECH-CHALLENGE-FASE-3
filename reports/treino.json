@@ -1,0 +1,286 @@
+{
+  "comparacao": [
+    {
+      "modelo": "gradient_boosting",
+      "roc_auc": 0.6543,
+      "roc_auc_dp": 0.0102,
+      "roc_auc_treino": 0.6802,
+      "gap_treino_validacao": 0.0259,
+      "acuracia": 0.6356,
+      "f1": 0.732,
+      "pr_auc": 0.7342,
+      "tempo_s": 5.9
+    },
+    {
+      "modelo": "random_forest",
+      "roc_auc": 0.6537,
+      "roc_auc_dp": 0.01,
+      "roc_auc_treino": 0.6847,
+      "gap_treino_validacao": 0.031,
+      "acuracia": 0.6349,
+      "f1": 0.7302,
+      "pr_auc": 0.7364,
+      "tempo_s": 3.5
+    },
+    {
+      "modelo": "regressao_logistica",
+      "roc_auc": 0.6482,
+      "roc_auc_dp": 0.0175,
+      "roc_auc_treino": 0.6582,
+      "gap_treino_validacao": 0.0101,
+      "acuracia": 0.6249,
+      "f1": 0.7166,
+      "pr_auc": 0.7339,
+      "tempo_s": 2.1
+    },
+    {
+      "modelo": "svm_linear",
+      "roc_auc": 0.6463,
+      "roc_auc_dp": 0.0164,
+      "roc_auc_treino": 0.6584,
+      "gap_treino_validacao": 0.0122,
+      "acuracia": 0.6245,
+      "f1": 0.7226,
+      "pr_auc": 0.7309,
+      "tempo_s": 4.5
+    },
+    {
+      "modelo": "arvore_decisao",
+      "roc_auc": 0.6427,
+      "roc_auc_dp": 0.0083,
+      "roc_auc_treino": 0.6688,
+      "gap_treino_validacao": 0.0262,
+      "acuracia": 0.6269,
+      "f1": 0.7202,
+      "pr_auc": 0.7184,
+      "tempo_s": 1.9
+    },
+    {
+      "modelo": "naive_bayes",
+      "roc_auc": 0.6276,
+      "roc_auc_dp": 0.0153,
+      "roc_auc_treino": 0.6439,
+      "gap_treino_validacao": 0.0162,
+      "acuracia": 0.6098,
+      "f1": 0.6936,
+      "pr_auc": 0.7154,
+      "tempo_s": 1.1
+    },
+    {
+      "modelo": "baseline",
+      "roc_auc": 0.5,
+      "roc_auc_dp": 0.0,
+      "roc_auc_treino": 0.5,
+      "gap_treino_validacao": 0.0,
+      "acuracia": 0.5979,
+      "f1": 0.7483,
+      "pr_auc": 0.5979,
+      "tempo_s": 0.8
+    }
+  ],
+  "comparacao_escalador_robusto": [
+    {
+      "modelo": "gradient_boosting",
+      "roc_auc": 0.6543,
+      "roc_auc_dp": 0.0102,
+      "roc_auc_treino": 0.6802,
+      "gap_treino_validacao": 0.0259,
+      "acuracia": 0.6356,
+      "f1": 0.732,
+      "pr_auc": 0.7342,
+      "tempo_s": 6.0
+    },
+    {
+      "modelo": "random_forest",
+      "roc_auc": 0.6537,
+      "roc_auc_dp": 0.01,
+      "roc_auc_treino": 0.6847,
+      "gap_treino_validacao": 0.031,
+      "acuracia": 0.6349,
+      "f1": 0.7302,
+      "pr_auc": 0.7363,
+      "tempo_s": 3.5
+    },
+    {
+      "modelo": "regressao_logistica",
+      "roc_auc": 0.6472,
+      "roc_auc_dp": 0.0162,
+      "roc_auc_treino": 0.6583,
+      "gap_treino_validacao": 0.011,
+      "acuracia": 0.6237,
+      "f1": 0.7206,
+      "pr_auc": 0.7323,
+      "tempo_s": 3.6
+    },
+    {
+      "modelo": "svm_linear",
+      "roc_auc": 0.6465,
+      "roc_auc_dp": 0.0162,
+      "roc_auc_treino": 0.6584,
+      "gap_treino_validacao": 0.012,
+      "acuracia": 0.6245,
+      "f1": 0.7226,
+      "pr_auc": 0.7311,
+      "tempo_s": 2.8
+    },
+    {
+      "modelo": "arvore_decisao",
+      "roc_auc": 0.6418,
+      "roc_auc_dp": 0.0076,
+      "roc_auc_treino": 0.6688,
+      "gap_treino_validacao": 0.027,
+      "acuracia": 0.6268,
+      "f1": 0.7202,
+      "pr_auc": 0.7181,
+      "tempo_s": 1.9
+    },
+    {
+      "modelo": "naive_bayes",
+      "roc_auc": 0.6276,
+      "roc_auc_dp": 0.0153,
+      "roc_auc_treino": 0.6439,
+      "gap_treino_validacao": 0.0162,
+      "acuracia": 0.6102,
+      "f1": 0.6807,
+      "pr_auc": 0.7154,
+      "tempo_s": 0.7
+    },
+    {
+      "modelo": "baseline",
+      "roc_auc": 0.5,
+      "roc_auc_dp": 0.0,
+      "roc_auc_treino": 0.5,
+      "gap_treino_validacao": 0.0,
+      "acuracia": 0.5979,
+      "f1": 0.7483,
+      "pr_auc": 0.5979,
+      "tempo_s": 1.4
+    }
+  ],
+  "ablacao_ibge": [
+    {
+      "modelo": "gradient_boosting",
+      "com_ibge": 0.6543,
+      "sem_ibge": 0.6539,
+      "diferenca": 0.0004
+    },
+    {
+      "modelo": "random_forest",
+      "com_ibge": 0.6537,
+      "sem_ibge": 0.6534,
+      "diferenca": 0.0003
+    },
+    {
+      "modelo": "regressao_logistica",
+      "com_ibge": 0.6482,
+      "sem_ibge": 0.6477,
+      "diferenca": 0.0005
+    },
+    {
+      "modelo": "svm_linear",
+      "com_ibge": 0.6463,
+      "sem_ibge": 0.6485,
+      "diferenca": -0.0022
+    },
+    {
+      "modelo": "arvore_decisao",
+      "com_ibge": 0.6427,
+      "sem_ibge": 0.6435,
+      "diferenca": -0.0008
+    },
+    {
+      "modelo": "naive_bayes",
+      "com_ibge": 0.6276,
+      "sem_ibge": 0.6334,
+      "diferenca": -0.0058
+    },
+    {
+      "modelo": "baseline",
+      "com_ibge": 0.5,
+      "sem_ibge": 0.5,
+      "diferenca": 0.0
+    }
+  ],
+  "curva_aprendizado": [
+    {
+      "n_treino": 2666,
+      "auc_treino": 0.9071,
+      "auc_validacao": 0.6211,
+      "gap": 0.286
+    },
+    {
+      "n_treino": 7466,
+      "auc_treino": 0.8216,
+      "auc_validacao": 0.6302,
+      "gap": 0.1914
+    },
+    {
+      "n_treino": 12266,
+      "auc_treino": 0.7298,
+      "auc_validacao": 0.6447,
+      "gap": 0.0851
+    },
+    {
+      "n_treino": 17066,
+      "auc_treino": 0.7108,
+      "auc_validacao": 0.6501,
+      "gap": 0.0607
+    },
+    {
+      "n_treino": 21866,
+      "auc_treino": 0.7036,
+      "auc_validacao": 0.6523,
+      "gap": 0.0513
+    },
+    {
+      "n_treino": 26666,
+      "auc_treino": 0.6992,
+      "auc_validacao": 0.654,
+      "gap": 0.0452
+    }
+  ],
+  "curva_validacao": [
+    {
+      "max_leaf_nodes": 4,
+      "auc_treino": 0.6688,
+      "auc_validacao": 0.6565
+    },
+    {
+      "max_leaf_nodes": 8,
+      "auc_treino": 0.6746,
+      "auc_validacao": 0.6562
+    },
+    {
+      "max_leaf_nodes": 15,
+      "auc_treino": 0.6843,
+      "auc_validacao": 0.655
+    },
+    {
+      "max_leaf_nodes": 31,
+      "auc_treino": 0.6988,
+      "auc_validacao": 0.6532
+    },
+    {
+      "max_leaf_nodes": 63,
+      "auc_treino": 0.715,
+      "auc_validacao": 0.6489
+    },
+    {
+      "max_leaf_nodes": 127,
+      "auc_treino": 0.7351,
+      "auc_validacao": 0.6459
+    }
+  ],
+  "melhores_parametros": {
+    "modelo__min_samples_leaf": 100,
+    "modelo__max_leaf_nodes": 15,
+    "modelo__max_iter": 300,
+    "modelo__learning_rate": 0.03,
+    "modelo__l2_regularization": 1.0
+  },
+  "roc_auc_validacao": 0.6543,
+  "n_treino": 116167,
+  "n_teste": 33833,
+  "municipios_treino": 4037,
+  "municipios_teste": 1346
+}
