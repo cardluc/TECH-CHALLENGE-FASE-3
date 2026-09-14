@@ -8,6 +8,11 @@ data/
 # ID do projeto de faturamento do BigQuery (local, por máquina)
 .gcp_project
 
+# apresentação: o gerador é versionado, o binário não
+# (não faz diff e incha o histórico a cada regeração)
+reports/apresentacao_fase3.pptx
+reports/apresentacao_fase3.pdf
+
 # python
 __pycache__/
 *.pyc

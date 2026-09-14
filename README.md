@@ -309,7 +309,7 @@ Ver seção 7 e as imagens 11, 13, 14 e 15 (permutação, SHAP em barras, *beesw
 │   ├── visualization/graficos.py
 │   └── relatorio.py
 ├── reports/                   # eda.md, modelagem.md, métricas e rankings
-├── scripts/gerar_apresentacao.py  # slides a partir dos artefatos de reports/
+├── scripts/gerar_apresentacao.py  # gera os slides a partir de reports/ (.pptx não versionado)
 ├── images/                    # 19 gráficos gerados
 ├── tests/                     # 13 testes (vazamento, split, pipeline, base)
 ├── main.py                    # pipeline reproduzível de ponta a ponta
