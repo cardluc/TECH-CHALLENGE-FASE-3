@@ -1,0 +1,16 @@
+# dados e artefatos gerados
+data/
+!data/.gitkeep
+
+# logs de execução (os resultados ficam em reports/*.json e *.csv)
+*.log
+
+# ID do projeto de faturamento do BigQuery (local, por máquina)
+.gcp_project
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
