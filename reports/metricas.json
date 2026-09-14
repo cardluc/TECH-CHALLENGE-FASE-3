@@ -1,0 +1,13 @@
+{
+  "limiar": 0.62,
+  "roc_auc": 0.6695,
+  "pr_auc": 0.7399,
+  "acuracia": 0.6108,
+  "brier": 0.2209,
+  "precisao_alfabetizado": 0.7227,
+  "recall_alfabetizado": 0.5585,
+  "f1_alfabetizado": 0.6301,
+  "precisao_nao_alfabetizado": 0.516,
+  "recall_nao_alfabetizado": 0.6872,
+  "f1_nao_alfabetizado": 0.5894
+}
