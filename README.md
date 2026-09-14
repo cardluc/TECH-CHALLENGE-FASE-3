@@ -152,7 +152,7 @@ O ROC AUC por aluno não prova que o ranking municipal sirva para decidir. A ver
 
 | Regra do ano anterior | 11,04 p.p. | — |
 
-O modelo erra **24% menos** que a regra ingênua (4.092 unidades comparadas). É este número, e não o AUC, que sustenta o uso do ranking para priorização.
+O modelo erra **25% menos** que a regra ingênua (4.092 unidades comparadas). É este número, e não o AUC, que sustenta o uso do ranking para priorização.
 
 ### 6.2 Duas hipóteses testadas que não se confirmaram
 
@@ -234,7 +234,7 @@ Sendo direto sobre o que este modelo **não** é:
 4. **Associação, não causalidade — e o risco é de viés de seleção.** As variáveis mais influentes indicam *onde* o risco se concentra, não *o que o causa*. Municípios com histórico melhor diferem dos demais **antes** de qualquer intervenção (renda, gestão, infraestrutura são variáveis confundidoras), então a comparação entre grupos não isola efeito. O ranking responde "quem está em risco?", não "o que funciona?" — esta segunda pergunta exigiria contrafactual: experimento aleatorizado, pareamento por *propensity score* ou desenho quase-experimental.
 5. **Dados de corte transversal, não série temporal.** Há um único ciclo-alvo com covariável defasada, não uma sequência {Yₜ}. Por isso não se aplicam decomposição sazonal, testes de estacionariedade nem *backtest* walk-forward: a ordem temporal é respeitada por construção (features de 2023, alvo em 2024), e o split é agrupado por município, não por data.
 6. **O nível da escola foi perdido** por limitação da fonte (máscara regerada anualmente) — era a unidade mais próxima do aluno.
-7. **A rede privada tem 25 alunos** na base: qualquer leitura sobre ela é estatisticamente vazia.
+7. **A rede privada tem 24 alunos** na amostra: qualquer leitura sobre ela é estatisticamente vazia.
 8. **Modelo treinado em amostra** de 150 mil alunos para viabilizar validação cruzada e SHAP; o ranking municipal usa 600 mil.
 
 ### 9.1 Decisões metodológicas e o que foi testado
